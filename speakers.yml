@@ -1,0 +1,8 @@
+- name: Configure Alsa
+  hosts: speakers
+  become: true
+  tasks:
+    - name: Configure Alsa
+      ansible.builtin.copy:
+        src: ./files/asound.conf
+        dest: /etc/asound.conf
