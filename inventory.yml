@@ -10,7 +10,7 @@ clients:
     speakers:
       hosts:
         bedroom:
-          ansible_host: bedroom-audio.local
+          ansible_host: passage-audio.local
           ansible_user: snapcast
 
 servers:
