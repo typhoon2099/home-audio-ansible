@@ -10,7 +10,7 @@
     - name: Download latest MPD
       ansible.builtin.git:
         repo: https://github.com/MusicPlayerDaemon/MPD.git
-        version: v0.23.13
+        version: v0.23.15
         depth: 1
         dest: /home/snapcast/mpd
     - name: Ensure MPD dependencies
