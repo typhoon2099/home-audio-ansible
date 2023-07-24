@@ -9,7 +9,7 @@ clients:
   children:
     speakers:
       hosts:
-        bedroom:
+        passage:
           ansible_host: passage-audio.local
           ansible_user: snapcast
 
