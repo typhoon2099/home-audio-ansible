@@ -1,7 +1,7 @@
 - name: Copy aliases
   hosts: all
   tasks:
-    - name: Configure Alsa
+    - name: Configure aliases
       ansible.builtin.copy:
         src: ./files/.bash_aliases
         dest: ~/.bash_aliases
