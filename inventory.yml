@@ -12,6 +12,9 @@ clients:
         passage:
           ansible_host: passage-audio.local
           ansible_user: snapcast
+        bathroom:
+          ansible_host: bathroom-audio.local
+          ansible_user: snapcast
 
 servers:
   hosts:
