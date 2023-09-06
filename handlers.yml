@@ -1,0 +1,5 @@
+- name: Restart Snapclient
+  become: true
+  ansible.builtin.service:
+    name: snapclient
+    state: restarted
