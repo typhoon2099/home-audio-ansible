@@ -1,4 +1,6 @@
 clients:
+  vars:
+    master_volume: 100
   hosts:
     living-room:
       ansible_host: living-room-audio.local
@@ -6,15 +8,18 @@ clients:
     kitchen:
       ansible_host: kitchen-audio.local
       ansible_user: snapcast
+      master_volume: 86
   children:
     speakers:
       hosts:
         passage:
           ansible_host: passage-audio.local
           ansible_user: snapcast
-        bathroom:
-          ansible_host: bathroom-audio.local
+          master_volume: 80
+        bedroom:
+          ansible_host: bedroom-audio.local
           ansible_user: snapcast
+          master_volume: 60
 
 servers:
   hosts:
