@@ -1,11 +1,10 @@
-- name: Setup Clients
+- name: Setup Client
   hosts: clients
   become: true
   tasks:
     - name: Ensure Snapclient
       apt:
-        deb: https://github.com/badaix/snapcast/releases/download/v0.27.0/snapclient_0.27.0-1_armhf.deb
+        deb: https://github.com/badaix/snapcast/releases/download/v0.29.0/snapclient_0.29.0-1_armhf_bullseye.deb
       notify: Restart Snapclient
   handlers:
     - import_tasks: handlers.yml
-
