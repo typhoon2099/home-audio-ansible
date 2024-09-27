@@ -9,29 +9,3 @@
   handlers:
     - import_tasks: handlers.yml
 
-- name: Configure Alsa
-  hosts: speakers
-  become: true
-  tasks:
-    - name: Configure Alsa
-      ansible.builtin.copy:
-        src: ./files/asound.conf
-        dest: /etc/asound.conf
-      notify: Restart Snapclient
-  handlers:
-    - import_tasks: handlers.yml
-
-- name: Set master volume
-  hosts: clients
-  become: true
-  tasks:
-    - name: Set master volume
-      ansible.builtin.command:
-        cmd: 'amixer set Master {{ master_volume }}%'
-      notify: Restart Snapclient
-    - name: Store value
-      ansible.builtin.command:
-        cmd: alsactl store
-      notify: Restart Snapclient
-  handlers:
-    - import_tasks: handlers.yml
