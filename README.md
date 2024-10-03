@@ -2,12 +2,11 @@
 
 Ansible Playbooks and Inventory for configuring my home audio setup.
 
-The audio server is a Raspberry Pi running MPD and Snapserver, and clients are
-Raspberry Pis running Snapclient. The server also acts as a client connected to
-the Living Room receiver.
+Clients are Raspberry Pis running Snapclient. The server also acts as a client
+connected to the Living Room receiver.
 
 This repo is also my attempt to learn Ansible, so I'm sure at this point there
-are a few Ansible no-nos in ehre, but as I learn more they will be ironed out.
+are a few Ansible no-nos in here, but as I learn more they will be ironed out.
 
 One issue I'm facing at the moment is that I can't pull a Git repo without
 installing a Python package, and that requires a Crypography package that needs
