@@ -6,12 +6,9 @@ clients:
     kitchen:
       ansible_host: kitchen-audio.local
       ansible_user: snapcast
-  children:
-    speakers:
-      hosts:
-        passage:
-          ansible_host: passage-audio.local
-          ansible_user: snapcast
-        bedroom:
-          ansible_host: bedroom-audio.local
-          ansible_user: snapcast
+    dining-room:
+      ansible_host: dining-room-audio.local
+      ansible_user: snapcast
+    bedroom:
+      ansible_host: bedroom-audio.local
+      ansible_user: snapcast
