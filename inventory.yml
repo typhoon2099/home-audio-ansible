@@ -15,9 +15,3 @@ clients:
         bedroom:
           ansible_host: bedroom-audio.local
           ansible_user: snapcast
-
-servers:
-  hosts:
-    living-room:
-      ansible_host: living-room-audio.local
-      ansible_user: snapcast
