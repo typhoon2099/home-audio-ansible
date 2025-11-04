@@ -2,9 +2,16 @@
   hosts: clients
   become: true
   tasks:
+    - name: Install dependencies
+      become: true
+      ansible.builtin.apt:
+        update_cache: true
+        pkg:
+          - libasound2
+          - libc6
     - name: Ensure Snapclient
       apt:
-        deb: https://github.com/badaix/snapcast/releases/download/v0.29.0/snapclient_0.29.0-1_armhf_bullseye.deb
+        deb: https://github.com/badaix/snapcast/releases/download/v0.32.3/snapclient_0.32.3-1_armhf_bookworm.deb
       notify: Restart Snapclient
   handlers:
     - import_tasks: handlers.yml
