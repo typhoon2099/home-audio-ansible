@@ -11,7 +11,7 @@
           - libc6
     - name: Ensure Snapclient
       apt:
-        deb: https://github.com/badaix/snapcast/releases/download/v0.32.3/snapclient_0.32.3-1_armhf_bookworm.deb
+        deb: https://github.com/snapcast/snapcast/releases/download/v0.34.0/snapclient_0.34.0-1_armhf_bookworm.deb
       notify: Restart Snapclient
   handlers:
     - import_tasks: handlers.yml
