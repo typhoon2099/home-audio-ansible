@@ -1,19 +1,19 @@
 clients:
   hosts:
     living-room:
-      ansible_host: living-room-audio.local
+      ansible_host: living-room.audio.home.arpa
       ansible_user: snapcast
     kitchen:
-      ansible_host: kitchen-audio.local
+      ansible_host: kitchen.audio.home.arpa
       ansible_user: snapcast
     dining-room:
-      ansible_host: dining-room-audio.local
+      ansible_host: dining-room.audio.home.arpa
       ansible_user: snapcast
     bedroom:
-      ansible_host: bedroom-audio.local
+      ansible_host: bedroom.audio.home.arpa
       ansible_user: snapcast
 servers:
   hosts:
     home-audio:
-      ansible_host: home-audio.local
+      ansible_host: home-audio.home.arpa
       ansible_user: root
